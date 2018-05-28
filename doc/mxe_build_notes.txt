@@ -1,0 +1,77 @@
+mxe notes
+
+based on:
+https://bitcointalk.org/index.php?topic=1080289.0
+
+1. Install dependencies
+sudo apt-get install p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils
+
+2.  Install mxe, build boost/qt against old openssl
+git clone https://github.com/mxe/mxe.git
+make the following changes:
+in mxe/src/openssl.mk:
+$(PKG)_VERSION  := 1.0.1p
+$(PKG)_CHECKSUM := bd5ee6803165c0fb60bbecbacacf244f1f90d2aa0d71353af610c29121e9b2f1
+in mxe/src/postgresql.mk:
+-        --with-zlib \
+-        CFLAGS="-DSSL_library_init=OPENSSL_init_ssl" \
++        CFLAGS="-DSSL_library_init=SSL_library_init" \
+
+or I made a snapshot of the repo with these changes just in case:
+https://github.com/GraphCoin/mxe-snapshot
+
+** Note: at some point I also changed the openssl configure line to "no-zlib" from "zlib", not sure if needed as there were some issues linking...
+
+then from mxe dir:
+make MXE_TARGETS="i686-w64-mingw32.static" openssl
+make MXE_TARGETS="i686-w64-mingw32.static" boost
+make MXE_TARGETS="i686-w64-mingw32.static" qttools
+
+
+3. build berkeleydb and miniupnpc per the article above:
+cd /root
+wget http://download.oracle.com/berkeley-db/db-5.3.28.tar.gz
+tar zxvf db-5.3.28.tar.gz
+cd db-5.3.28
+MXE_PATH=/root/mxe
+sed -i "s/WinIoCtl.h/winioctl.h/g" src/dbinc/win_db.h
+mkdir build_mxe
+cd build_mxe
+
+CC=$MXE_PATH/usr/bin/i686-w64-mingw32.static-gcc \
+CXX=$MXE_PATH/usr/bin/i686-w64-mingw32.static-g++ \
+../dist/configure \
+	--disable-replication \
+	--enable-mingw \
+	--enable-cxx \
+	--host x86 \
+	--prefix=$MXE_PATH/usr/i686-w64-mingw32.static
+make
+make install
+
+cd /root
+wget http://miniupnp.free.fr/files/miniupnpc-1.6.20120509.tar.gz
+tar zxvf miniupnpc-1.6.20120509.tar.gz
+cd miniupnpc-1.6.20120509
+MXE_PATH=/root/mxe
+CC=$MXE_PATH/usr/bin/i686-w64-mingw32.static-gcc \
+AR=$MXE_PATH/usr/bin/i686-w64-mingw32.static-ar \
+CFLAGS="-DSTATICLIB -I$MXE_PATH/usr/i686-w64-mingw32.static/include" \
+LDFLAGS="-L$MXE_PATH/usr/i686-w64-mingw32.static/lib" \
+make libminiupnpc.a
+
+mkdir $MXE_PATH/usr/i686-w64-mingw32.static/include/miniupnpc
+cp *.h $MXE_PATH/usr/i686-w64-mingw32.static/include/miniupnpc
+cp libminiupnpc.a $MXE_PATH/usr/i686-w64-mingw32.static/lib
+
+
+4.  Download prebuilt secp256k1
+https://drive.google.com/file/d/0B5j8d4FSc7drYzlpMVJKbVdISVk/view
+copy to /root and unpack
+
+5.  build Graphcoin
+cd /root/MasterNodeSource
+./qmake-mxe.sh
+edit Makefile.Release towards the top on the LIBS= line add "-lpthread" to end of line just before "build/bitcoin-qt_res.o"
+make -f Makefile.Release
+profit!
