@@ -10,7 +10,7 @@ MAXIMUM BLOCK SIZE : 3 MB
 
 Block Time : 60 Sec Approx
 
-MINIMUM STAKE AGE : 24 Hr
+MINIMUM STAKE AGE : 12 Hr
 
 Coin Maturity : 20
 
@@ -20,6 +20,6 @@ RPC Port: 7120
 
 Network Port: 7119
 
-Find the Compiled Wallets here https://github.com/Graphcoin/Wallet
+Find the Compiled Wallets here https://github.com/Graphcoin/Downloads
 
-Wallet Masternode Setup Guides https://github.com/Graphcoin/Wallet/wiki
+Wallet Masternode Setup Guides https://github.com/Graphcoin/Downloads/wiki
