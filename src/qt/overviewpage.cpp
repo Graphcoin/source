@@ -172,7 +172,14 @@ OverviewPage::OverviewPage(QWidget *parent) :
         ui->labelUnconfirmed->setStyleSheet(whiteLabelQSS);
         ui->labelImmature->setStyleSheet(whiteLabelQSS);
         ui->labelTotal->setStyleSheet(whiteLabelQSS);
-    }
+    } else {
+        const char* blackLabelQSS = "QLabel { color: rgb(0,0,0); }";
+        ui->labelBalance->setStyleSheet(blackLabelQSS);
+        ui->labelStake->setStyleSheet(blackLabelQSS);
+        ui->labelUnconfirmed->setStyleSheet(blackLabelQSS);
+        ui->labelImmature->setStyleSheet(blackLabelQSS);
+        ui->labelTotal->setStyleSheet(blackLabelQSS);
+	}
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)

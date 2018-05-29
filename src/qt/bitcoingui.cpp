@@ -225,7 +225,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
 		QString curStyle = qApp->style()->metaObject()->className();
 		if (curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
 		{
-			progressBar->setStyleSheet("QProgressBar { color: #000000;background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
+			progressBar->setStyleSheet("QProgressBar { color: #ffffff;background-color: #e8e8e8; border: 1px solid grey; border-radius: 7px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #FF8000, stop: 1 orange); border-radius: 7px; margin: 0px; }");
 		}
 	}
 
@@ -452,7 +452,7 @@ void BitcoinGUI::createToolBars()
 	toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
 	toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
 	toolbar->setObjectName("tabs");
-	toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold;} QToolButton:hover { background-color: #595959 } QToolButton:checked { background-color: #484848 } QToolButton:pressed { background-color: #164356 } #tabs { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #404040, stop: 1 #000000);  }");
+	toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold;} QToolButton:hover { background-color: #3CB0E8 } QToolButton:checked { background-color: #484848 } QToolButton:pressed { background-color: #164356 } #tabs { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #404040, stop: 1 #000000);  }");
 
 	QLabel* header = new QLabel();
 	header->setMinimumSize(142, 142);
