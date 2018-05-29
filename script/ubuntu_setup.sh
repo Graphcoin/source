@@ -56,9 +56,8 @@ if [[ $DOSETUP =~ "y" ]] ; then
   source ~/.bashrc
 fi
 
-wget "https://github.com/Graphcoin/downloads/raw/master/graphcoind-ubuntu.tgz"
-tar -xvf graphcoind-ubuntu.tgz
-sudo mv  graphcoind-ubuntu/graphcoind /usr/bin
+wget "https://github.com/Graphcoin/downloads/raw/master/Linux_x64/graphcoind"
+sudo mv graphcoind /usr/bin
 
 echo ""
 echo "Configure your masternodes now!"
