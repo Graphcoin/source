@@ -11,6 +11,10 @@ src/qt/locale/*.qm
 *.swo
 src/graphcoind
 src/secp256k1/build-aux/*
+!src/secp256k1/build-aux/m4
+src/secp256k1/build-aux/m4/*
+!src/secp256k1/build-aux/m4/ax_prog_cc_for_build.m4
+!src/secp256k1/build-aux/m4/bitcoin_secp.m4
 graphcoind_linux
 graphcoin-qt_plugin_import.cpp
 object_script.Graphcoin-qt.*
