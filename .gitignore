@@ -2,7 +2,7 @@
 .qmake.stash
 *.app/
 *.dmg
-Makefile*
+/Makefile*
 build/
 qrc_bitcoin.cpp
 *~
