@@ -1,9 +1,13 @@
 Building Graphcoin
 
-See doc/readme-qt.rst for instructions on building Graphcoin QT,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of Graphcoin.
+Use the autogen script to prepare the build environment.
 
-See doc/build-*.txt for instructions on building graphcoind,
+    ./autogen.sh
+    ./configure
+    make
+
+Always verify the signatures and checksums.
+
+See doc/build-*.md for instructions on building graphcoind,
 the intended-for-services, no-graphical-interface, reference
 implementation of Graphcoin.

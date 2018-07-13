@@ -1,25 +1,21 @@
-Graph Coin Specification
+# Wallets
 
-Coin Name : Graph Coin
+https://github.com/Graphcoincoin/Source/releases
 
-Ticker : GRPH
+Wallet Masternode Setup Guides https://github.com/Graphcoincoin/Wallet/wiki
 
-Coin Type :  POS / Masternode
+RPC Port : 22617
 
-MAXIMUM BLOCK SIZE : 3 MB
+P2P Port : 22629
 
-Block Time : 60 Sec Approx
+Explorer : http://209.97.131.20
 
-MINIMUM STAKE AGE : 12 Hr
+Nodes List 
 
-Coin Maturity : 20
-
-MAX SUPPLY : 100,000,000 Coins
-
-RPC Port: 7120
-
-Network Port: 7119
-
-Find the Compiled Wallets here https://github.com/Graphcoin/Downloads
-
-Wallet Masternode Setup Guides https://github.com/Graphcoin/Downloads/wiki
+* addnode=209.97.131.147
+* addnode=209.97.139.20
+* addnode=209.97.139.2
+* addnode=206.189.155.48
+* addnode=167.99.234.81
+* addnode=138.197.146.236
+* addnode=209.97.131.20

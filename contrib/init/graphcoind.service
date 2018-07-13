@@ -1,0 +1,26 @@
+[Unit]
+Description=Graphcoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=graphcoin
+Group=graphcoin
+
+Type=forking
+PIDFile=/var/lib/graphcoind/graphcoind.pid
+
+ExecStart=/usr/bin/graphcoind -daemon -pid=/var/lib/graphcoind/graphcoind.pid \
+          -conf=/etc/graphcoin/graphcoin.conf -datadir=/var/lib/graphcoind
+
+ExecStop=-/usr/bin/graphcoin-cli -conf=/etc/graphcoin/graphcoin.conf \
+         -datadir=/var/lib/graphcoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

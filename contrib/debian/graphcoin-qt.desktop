@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Graphcoin
+Comment=Graphcoin P2P Cryptocurrency
+Comment[fr]=Graphcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Graphcoin, eşten eşe kriptografik sanal para birimi
+Exec=graphcoin-qt %u
+Terminal=false
+Type=Application
+Icon=graphcoin128
+MimeType=x-scheme-handler/graphcoin;
+Categories=Office;Finance;
