@@ -1,8 +1,8 @@
 # Wallets
 
-https://github.com/Graphcoincoin/Source/releases
+https://github.com/Graphcoin/downloads
 
-Wallet Masternode Setup Guides https://github.com/Graphcoincoin/Wallet/wiki
+Wallet Masternode Setup Guides https://github.com/Graphcoin/downloads/wiki
 
 RPC Port : 22617
 
