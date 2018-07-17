@@ -91,6 +91,18 @@ echo "externalip=$IP" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
 sudo ufw allow $PORT/tcp
 
+echo "" >> $CONF_DIR/$CONF_FILE
+echo "addnode=178.128.14.55" >> $CONF_DIR/$CONF_FILE
+echo "addnode=178.128.3.233" >> $CONF_DIR/$CONF_FILE
+echo "addnode=159.65.205.213" >> $CONF_DIR/$CONF_FILE
+echo "addnode=139.59.137.51" >> $CONF_DIR/$CONF_FILE
+echo "addnode=159.65.251.84" >> $CONF_DIR/$CONF_FILE
+echo "addnode=178.128.102.184" >> $CONF_DIR/$CONF_FILE
+echo "addnode=209.97.178.6" >> $CONF_DIR/$CONF_FILE
+echo "addnode=188.166.105.42" >> $CONF_DIR/$CONF_FILE
+echo "addnode=178.128.55.137" >> $CONF_DIR/$CONF_FILE
+echo "addnode=206.189.121.233" >> $CONF_DIR/$CONF_FILE
+
 sudo chmod 755 /usr/bin/graphcoind
 sudo chmod 755 /usr/bin/graphcoin-cli
 graphcoind -daemon
