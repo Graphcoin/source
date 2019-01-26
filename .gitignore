@@ -133,3 +133,7 @@ cmake-build-debug
 /background.tiff.png
 /background.tiff@2x.png
 
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/source-1/v15/Browse.VC.db
+.vs/source-1/v15/Browse.VC.opendb
