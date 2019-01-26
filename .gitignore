@@ -137,3 +137,5 @@ cmake-build-debug
 .vs/slnx.sqlite
 .vs/source-1/v15/Browse.VC.db
 .vs/source-1/v15/Browse.VC.opendb
+.vs/source-1/v15/ipch/AutoPCH/575198287f33103b/CLIENTVERSION.ipch
+.vs/source-1/v15/.suo
