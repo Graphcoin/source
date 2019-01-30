@@ -23,7 +23,7 @@ static const bool DEFAULT_SPLASHSCREEN = true;
 #define STYLE_INVALID "background:#FF8080"
 
 /* Transaction list -- unconfirmed transaction */
-#define COLOR_UNCONFIRMED QColor(130, 130, 130)
+#define COLOR_UNCONFIRMED QColor(94, 94, 94)
 /* Transaction list -- negative amount */
 #define COLOR_NEGATIVE QColor(245, 23, 0)
 /* Transaction list -- bare address (without label) */
