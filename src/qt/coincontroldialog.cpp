@@ -133,12 +133,12 @@ CoinControlDialog::CoinControlDialog(QWidget* parent, bool fMultisigEnabled) : Q
     ui->treeWidget->headerItem()->setText(COLUMN_CHECKBOX, QString());
 
     ui->treeWidget->setColumnWidth(COLUMN_CHECKBOX, 84);
-    ui->treeWidget->setColumnWidth(COLUMN_AMOUNT, 100);
+    ui->treeWidget->setColumnWidth(COLUMN_AMOUNT, 120);
     ui->treeWidget->setColumnWidth(COLUMN_LABEL, 170);
     ui->treeWidget->setColumnWidth(COLUMN_ADDRESS, 190);
-    ui->treeWidget->setColumnWidth(COLUMN_DATE, 80);
-    ui->treeWidget->setColumnWidth(COLUMN_CONFIRMATIONS, 100);
-    ui->treeWidget->setColumnWidth(COLUMN_PRIORITY, 100);
+    ui->treeWidget->setColumnWidth(COLUMN_DATE, 106);
+    ui->treeWidget->setColumnWidth(COLUMN_CONFIRMATIONS, 120);
+    ui->treeWidget->setColumnWidth(COLUMN_PRIORITY, 80);
     ui->treeWidget->setColumnHidden(COLUMN_TYPE, true);           // store type in this column, but dont show it
     ui->treeWidget->setColumnHidden(COLUMN_TXHASH, true);         // store transacton hash in this column, but dont show it
     ui->treeWidget->setColumnHidden(COLUMN_VOUT_INDEX, true);     // store vout index in this column, but dont show it
