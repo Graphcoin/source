@@ -12,7 +12,7 @@ WalletFrame {
 }
 QStatusBar {
     background-color: #121212;
-    color: #353c42;
+    color: #e4e4e4;
     padding-left:4px;
 }
 .QFrame {
@@ -94,7 +94,7 @@ QProgressBar {
 	border: 1px solid rgba(255, 255, 255, 0.74);
 	border-radius: 5px;
 	background-color: transparent;
-	background-color: rgba(255, 255, 255, 0.356);
+	background-color: rgba(255, 255, 255, 0.507);
 	border: 0;
 	overflow: hidden;
 	margin: 4px;
@@ -109,7 +109,7 @@ QProgressBar::chunk {
 } */
 
 #progressBarLabel {
-	color:#49545e;
+	color:#e4e4e4;
 	padding-left:4px;
 }
 
