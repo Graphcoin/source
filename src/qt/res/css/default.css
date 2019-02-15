@@ -11,7 +11,7 @@ WalletFrame {
 	padding: 0;
 }
 QStatusBar {
-    background-color: #141414;
+    background-color: #121212;
     color: #353c42;
     padding-left:4px;
 }
@@ -40,7 +40,7 @@ QMenu::item:selected {
 	color: #fff;
 }
 QToolBar {
-	background-color: #141414;
+	background-color: #121212;
 	border: 0px solid #000;
 	padding: 0;
 	margin: 0;
@@ -83,7 +83,7 @@ QToolBar > QToolButton:checked {
 	background-color: transparent;
 	color: #FFFFFF;
 	/* font-weight:bold; */
-	border-right: 3px solid #5eff00;
+	border-right: 3px solid #00d764;
 	opacity: 1;
 }
 QMessageBox {
@@ -100,8 +100,8 @@ QProgressBar {
 	margin: 4px;
 }
 QProgressBar::chunk {
-	background-color: rgb(30, 255, 0);
-	background-color: rgb(0, 255, 21);
+	background-color: #00d764;
+	background-color: #00d764;
 	width: 20px;
 }
 /* QProgressBar::chunk:first-child {
@@ -138,7 +138,7 @@ QTabBar::tab {
     border-right-color:transparent;
 }
 QTabBar::tab:selected {
-    border-bottom: 3px solid #5eff00;
+    border-bottom: 3px solid #00d764;
     background-color:transparent;
 }
 QTabBar::tab:pressed {
@@ -235,7 +235,7 @@ QLineEdit:focus, BitcoinAmountField:focus {
 
 QPushButton {
 	/* Global Button Style */
-	background-color: #464646;
+	background-color: #00b958;
 	padding: 0.85em 2em;
 	font-family: "Montserrat";
 	letter-spacing: 1px;
@@ -247,7 +247,7 @@ QPushButton {
 	text-transform: uppercase;
 }
 QPushButton:hover {
-	background-color: #8d8d8d;
+	background-color: #00d764;
 }
 QPushButton:focus {
 	border: none;
@@ -255,6 +255,7 @@ QPushButton:focus {
 }
 QPushButton:pressed {
 	border: 1px solid #333;
+	background-color: #00b958;
 }
 QComboBox {
 	/* Dropdown Menus */
