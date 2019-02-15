@@ -483,7 +483,7 @@ QScrollBar:horizontal {
 }
 QScrollBar::handle:vertical {
 	/* Scroll Bar Slider - vertical */
-	background: #333b46;
+	background: #444444;
     border-radius: 6px;
     min-height:50px;
     width:3px;
@@ -494,7 +494,7 @@ QScrollBar::handle:vertical {
 
 QScrollBar::handle:horizontal {
 	/* Scroll Bar Slider - horizontal */
-	background: #333b46;
+	background: #444444;
     min-width: 50px;
     border-radius: 6px;
 }
