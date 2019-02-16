@@ -145,7 +145,7 @@ QTabBar::tab:pressed {
     outline:0;
 }
 QWidget {
-	selection-background-color: #fff;
+	selection-background-color: #333333;
 	/* Object highlight color */
 	selection-color: #000;
 	outline: 0;
@@ -298,7 +298,7 @@ QComboBox::down-arrow {
 	border-image: url(':/images/downArrow') 0 0 0 0 stretch stretch;
 }
 QComboBox QListView {
-	background: #252f3b;
+	background: #121212;
 	border: 0;
 	padding-right: 1px;
 	padding-left: 1px;
@@ -312,7 +312,7 @@ QComboBox::item {
 	color: #818181;
 }
 QComboBox::item:alternate {
-	background: #252f3b;
+	background: #121212;
 }
 QComboBox::item:selected {
 	border: 0px solid transparent;
