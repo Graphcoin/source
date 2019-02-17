@@ -2136,7 +2136,7 @@ double ConvertBitsToDouble(unsigned int nBits)
 	return dDiff;
 }
 
-double rewardByYear[] = {20.0,16.4,13.45,11.03,9.04,7.41,6.08,4.99,4.09,3.35,2.75,2.25,1.85};
+double rewardByYear[] = {10.0,8.2,6.725,5.515,4.52,3.705,3.04,2.495,2.045,1.675,1.375,1.125,0.925};
 int64_t GetBlockValue(int nHeight)
 {
   	const int YEARLY_BLOCKCOUNT = 525650;
