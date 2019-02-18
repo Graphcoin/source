@@ -202,13 +202,12 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xc5fde2cb354cbb473bb6f9a3148b7a3aae399fc9c2c090a5d54edfb430fe3cca"));
         
         
-        vSeeds.push_back(CDNSSeedData("0", "188.166.156.88"));              
-        vSeeds.push_back(CDNSSeedData("1", "167.99.179.227"));
-        vSeeds.push_back(CDNSSeedData("2", "192.241.137.186"));           
-	      vSeeds.push_back(CDNSSeedData("3", "128.199.95.1"));           
-	      vSeeds.push_back(CDNSSeedData("4", "37.139.16.230"));           
-	      vSeeds.push_back(CDNSSeedData("5", "107.170.231.203"));          
-        vSeeds.push_back(CDNSSeedData("6", "206.189.53.32"));   
+        vSeeds.push_back(CDNSSeedData("s01.graphcoin.net", "s01.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s02.graphcoin.net", "s02.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s03.graphcoin.net", "s03.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s04.graphcoin.net", "s04.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s05.graphcoin.net", "s05.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s06.graphcoin.net", "s06.graphcoin.net"));
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 97);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 98);
