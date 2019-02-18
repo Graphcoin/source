@@ -2136,6 +2136,14 @@ double ConvertBitsToDouble(unsigned int nBits)
 	return dDiff;
 }
 
+CAmount GetCurrentCollateral()
+{
+    if (IsSporkActive(SPORK_18_CHANGE_COLLATERAL))
+        return Params().MasternodeCollateralNew();
+    else
+        return Params().MasternodeCollateralAmt();
+}
+
 double rewardByYear[] = {10.0,8.2,6.725,5.515,4.52,3.705,3.04,2.495,2.045,1.675,1.375,1.125,0.925};
 int64_t GetBlockValue(int nHeight)
 {
