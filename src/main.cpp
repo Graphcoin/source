@@ -1444,6 +1444,7 @@ bool CheckTransaction(const CTransaction& tx, bool fZerocoinActive, bool fReject
 		}
 	}
 
+int nHeight = chainActive.Height();
 	// Check for duplicate inputs
 	set<COutPoint> vInOutPoints;
 	BOOST_FOREACH(const CTxIn& txin, tx.vin) {
