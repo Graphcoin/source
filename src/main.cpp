@@ -2307,7 +2307,7 @@ void Misbehaving(NodeId pnode, int howmuch, int flag)
 		return;
 
 	state->nMisbehavior += howmuch;
-	int banscore = GetArg("-banscore", 100);
+	int banscore = GetArg("-banscore", 10000);
 	if (state->nMisbehavior >= banscore && state->nMisbehavior - howmuch < banscore) {
 		LogPrintf("Misbehaving: %s (%d -> %d) BAN THRESHOLD EXCEEDED && Flag = %d\n", state->name, state->nMisbehavior - howmuch, state->nMisbehavior, flag);
 		state->fShouldBan = true;
