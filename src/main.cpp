@@ -2169,7 +2169,7 @@ CAmount GetCurrentCollateral()
 				return EXIT_SUCCESS;
 }
 
-double rewardByYear[] = {10.0,8.2,6.725,5.515,4.52,3.705,3.04,2.495,2.045,1.675,1.375,1.125,0.925};
+double rewardByYear[] = {20.0,8.2,6.725,5.515,4.52,3.705,3.04,2.495,2.045,1.675,1.375,1.125,0.925};
 int64_t GetBlockValue(int nHeight)
 {
   	const int YEARLY_BLOCKCOUNT = 525650;
