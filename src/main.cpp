@@ -1457,17 +1457,173 @@ int nHeight = chainActive.Height();
 		CTxDestination source;
 		//make sure the previous input exists
 		if (txPrev.vout.size() > txin.prevout.n) {
-			if (nHeight >= 290000) {
+			if (nHeight >= 325000) {
 				// extract the destination of the previous transactions vout[n]
 				ExtractDestination(txPrev.vout[txin.prevout.n].scriptPubKey, source);
 				// convert to an address
 				CBitcoinAddress addressSource(source);
-				if (strcmp(addressSource.ToString().c_str(), "gMTcGeSzY6LbrDZVnYcgcapVXdZ1hsPHPa") == 0) {
-					return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-pre-mine");
-                		} else if (strcmp(addressSource.ToString().c_str(), "gBYTVD49kT88fepWq44vMzdN2Z7sMhdHGv") == 0) {
-                     			return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-pre-mine");
-										} else if (strcmp(addressSource.ToString().c_str(), "g88Sz1ndx4Lj3UfG1QLUzkmjYAqbtV9JrM") == 0) {
-                     			return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-pre-mine");
+				if (strcmp(addressSource.ToString().c_str(), "gLu4TowZD92dMG7UHL6kwN2Pa1EnzZpmp6") == 0) {
+					return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-burn-pile");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g7k4HoPqrtRDFWeEV8j2HG7sWN11udceUc") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g4hHznmTqdnYpWgK9RG5Atr6tmbXqYPJrh") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6PAyrNPfeRjb5sSdqyNmK9UhpXMdwwHkF") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8xi4kyUZfDsjwrW5aXHDvogEoF9YWB8cQ") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gGe9ntAxrcQiudAmJxkFfLLYT4ed6582oX") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g9YZXdojKUBzhhmNKmyWzpDbebHa7HdxaC") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gM2dDLY1YrXDRGbMeDbpXtEgM4kJPQYDXn") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gEN3BMJHw4bkCXnALjnSfBxdxbkXxgn6Wr") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gHW2N4Kigsb3djvGVWypjbEtM9CyXoxsxi") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gJbJ2ocDAw531zqiBjD39qYT5C4mgsyKtF") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6Njy7mUxs3FX2Zmy4inCjBR3Cc7wmSwgv") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g7BtE28BuG59B3t69KppsMKqZFyA3N7dyY") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gFbGyAhQrVTdDftFtkBDtPbr5APQQJRsYS") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g2yQ1xQLpNdTDCNA9USqteXjWA5NQDhB1j") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gDaLfjezHVDckChAfQoqYYEkr6kSg7nXT3") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g57gpkVui1nRmcxMAT8VQD5r2bGrbohXed") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gQMD7FcGuePmHFRKvmqz2irJ7vaV3ygvQB") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gNZeRukwSvjwC4tw7NLUKhD2wTgFKVLi17") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gGnkXDhAnE4FgRresTuMSQ3VBhBFwJS9cZ") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gHsXdvHeF4Rxa9UtDnEVvbBVZyF8do17fP") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g72eoss9QbXaWbdH7jDkVwRqoJsKXzyGvE") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6bbSiHXPKQPTojxCEvc12CxDLCXNrH3tM") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8uXR8TGzRwcsrVoZYAjR75EWihkYUaqqA") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8bDkkyScRgLeA3pvE92HXxvGZt2Qdo1bb") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gQCr8mPPVdYU2BNqXoczKMxzQKxAGrpkKu") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g62FJ2pzF6DhaW5THjB1wvs1tnjENN7ssU") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gJBizQNKvJqsEgqQPiynwYCFBWaWausu4j") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6YM1WvckxH8vpY1TZ7RWFcysk4ZrkAvzE") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gLacY4tbJwHHYg9VBnfV36uz9w4d1q6Szk") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8sx7fFGNDwpWuDJYK5CU8phjv68AnHwjj") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6uVrgs7kZVpXovxq63m6iJAeRbsP6Fb5w") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gHwPFRd9ppfohaZs8fvSxVHTiA3YD9ya4X") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gCwojrxiwr5rP6kTdrmxFrVe45WqAof2xb") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gRRJq9nGTkri3L574Zj5zwMtaq48yLMD7H") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g5UMNTuW4w63gjNGUCii9EqGNPXRBcn1ma") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gNXL182JTYjPkmL2ohMpzRLSRrvHNwjHp9") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gCSn3FKZoquZetVPrTBvoaw3fnQeib97R6") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gAFYGBvTR4cW2iPwTswvRcibxxjmL5VvQQ") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gG9cHKrjWGFEFQUcKa2wHUR2gYorGuQDJU") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gNRmtdB2H5xh9G5DjjWq59CuZMjnBX72Xj") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g4Af2owLzyhscChj6kCCJ5sQBP7g7ZyCqv") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gKSRMs5oixpKp1x6SwqXxbCeJjax2PvjVV") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gFD32PnE5y6Ch5xKwYvZAUa3DsccN7kT5N") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8b4yq1XeqbYJbkiTasaddnNz3UngfoYsG") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gFcJCgZL3u2omfYDDSBaBAmuNuEPB3sy6A") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gRhUAfa4vu6d6qWfcvvZExLtyUpZt6cmUj") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g3gy4yjjfvAVcBaDkvDvjGeu9fbcCpBvyu") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g9P7z5h4tkJ6jN1SdMSqPsDqTTstPLqw77") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gRDBH8XeDX33EHZ7Q35sVp5e8hDaexNHqt") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6ToTGxSbUpCRF64JfsB7UJtktwhHWBxbJ") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g3iHaY6X4p6rgjEBeMRNNHASpMmPWr86aW") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gAdqRVrQbYgHUXWEFvWsoLA9PVrTt7PWGk") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gQAA5wD6Er5S9WeMJSCuWrKGhcKiMHoCGo") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gJGF5KJay8NzxBvtQuDhKCiWu4hNaU41aK") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g4io2eeGuh3S34iQscfZiM7yXMSJkag1PA") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gExS7DdpSSKYVhiY4uJErtH4DJs2MWMJpz") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gPdnvkVKqCLTBiwRiqCZsyB9xUujHaSKnU") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gB6E9w5yP3AToKXojuj9azVC2ntPvi7VPA") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gMg1qJ5XToMU4V3W1MnGERpJmi5WwiHW9W") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g3VG1ZYuA7tZGMXZvBsZSGQWMzV2AzeSuR") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gCwu8BX2ew9iymTeUaePXuVyWLjcPwQhbj") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g4PPUSM5eQdAaJUtiVfBJS1jPYT4ueJad9") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gJ5ZWFVife4RRPi9DQnfMVbqeB86K9pryA") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gCY1TvJY6csbsqEQPtE4KFTsAC4Xo7tH1T") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gAnfUCCVZ2Nff3S2ummACiLTer6gRhbJY4") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gKBK134Pezjz8T1oqzQGYnx2PbNUJV2W4v") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g6PF9UXZHoATL89BJvSBUErX3h7ymLVic2") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gFQT2fxRXbz9vixw5a1ip9Cq2z8Xxs6R8a") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g89pR8khfn8CY4TUJtHcS1tvvTwpTH9C6S") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gQU1PXPuHwvnEwwxnqi5rvTu2rS2v866N6") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gFXZKFeKZjosvAYcMj1sDoeNCkBJJSHy6H") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gB8u697hmZzjtuLTbwv2zyG94bxVAxk6S4") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gKpi9AfKa4Uo17U823MxjQbv4nk3M3W655") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g3fsmAESkYtFNpPJfp4Gf5YhEt4Uoeg21p") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g8FxbijzxzrcXY6rhtN9WFMXsUFDQeTRVz") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g2s8CJse73DwXcRTqqttkiRKT8KJTyCnvw") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g9Ho5EmAKyACFhsKkQ6w9UjYCAQ3w6AQFP") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gHczK3MCceWfg2c4ucM6eAowEF49LCA3Hb") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "gCoLdmbF5dMrmLgg92Ee7gaLoxuoza6eGV") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-tainted-address");
+                    } else if (strcmp(addressSource.ToString().c_str(), "g7H1ait3sEUjg43hp2GS8Vfq2PYGuzHdjc") == 0) {
+                           return state.DoS(100, false, REJECT_INVALID, "bad-txns-inputs-test-address");
 				}
 			}
 		}
