@@ -142,6 +142,8 @@ public:
         nMaturity = 10;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 88000000 * COIN;
+        nMasternodeCollateralAmt = 5000;
+        nMasternodeCollateralNew = 50000;
 
         /** Height or Time Based Activations **/
         nLastPOWBlock = 400;
@@ -202,13 +204,12 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0xc5fde2cb354cbb473bb6f9a3148b7a3aae399fc9c2c090a5d54edfb430fe3cca"));
         
         
-        vSeeds.push_back(CDNSSeedData("0", "188.166.156.88"));              
-        vSeeds.push_back(CDNSSeedData("1", "167.99.179.227"));
-        vSeeds.push_back(CDNSSeedData("2", "192.241.137.186"));           
-	      vSeeds.push_back(CDNSSeedData("3", "128.199.95.1"));           
-	      vSeeds.push_back(CDNSSeedData("4", "37.139.16.230"));           
-	      vSeeds.push_back(CDNSSeedData("5", "107.170.231.203"));          
-        vSeeds.push_back(CDNSSeedData("6", "206.189.53.32"));   
+        vSeeds.push_back(CDNSSeedData("s01.graphcoin.net", "s01.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s02.graphcoin.net", "s02.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s03.graphcoin.net", "s03.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s04.graphcoin.net", "s04.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s05.graphcoin.net", "s05.graphcoin.net"));
+        vSeeds.push_back(CDNSSeedData("s06.graphcoin.net", "s06.graphcoin.net"));
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 97);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 98);
@@ -231,8 +232,8 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "046242c3420f4092b78339ce21f34e827ce8f7193ed319a2e662d64ee07f73679e11d138a426f70e39c6baa8935386eab71abcd1aba186b58ac5c7fd9c05bc4669";
-        strSporkKeyOld = "04B433E6598390C992F4F022F20D3B4CBBE691652EE7C48243B81701CBDB7CC7D7BF0EE09E154E6FCBF2043D65AF4E9E97B89B5DBAF830D83B9B7F469A6C45A717";
+        strSporkKey = "04e162054b71276f47024fe960e86ee4c21c8c09c54e1581468a0cd42e097b0666c6c07fb81930fb76840a6bf897e9a17632472336272ebc6429cc1d86c3fdc26c";
+        strSporkKeyOld = "046242c3420f4092b78339ce21f34e827ce8f7193ed319a2e662d64ee07f73679e11d138a426f70e39c6baa8935386eab71abcd1aba186b58ac5c7fd9c05bc4669";
         strObfuscationPoolDummyAddress = "d87q2gC9j6nNrnzCsg4aY6bHMLsT9nUhEw";
         nStartMasternodePayments = 1529784000; //Saturday, June 23, 2018 8:00:00 PM GMT
 
@@ -335,8 +336,8 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04A8B319388C0F8588D238B9941DC26B26D3F9465266B368A051C5C100F79306A557780101FE2192FE170D7E6DEFDCBEE4C8D533396389C0DAFFDBC842B002243C";
-        strSporkKeyOld = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
+        strSporkKey = "04a911b72ca16fdfdc7a756965d99ac34e9244b6cfca3b6ee2f821e9ba0b72eb623388fb5d7e4290dffdff75bdb23a8b8acaf2233d10f5798006bc30a68ebf9cd8";
+        strSporkKeyOld = "04A8B319388C0F8588D238B9941DC26B26D3F9465266B368A051C5C100F79306A557780101FE2192FE170D7E6DEFDCBEE4C8D533396389C0DAFFDBC842B002243C";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1524201152; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
